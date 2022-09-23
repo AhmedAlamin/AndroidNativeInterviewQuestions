@@ -36,22 +36,72 @@ intensive and hence not suited for resource constrained environment of a mobile 
 
 
 What is a BuildType in Gradle? And what can you use it for?
+https://www.digitalocean.com/community/tutorials/android-build-types-product-flavors
 
+A build type determines how an app is packaged. By default, the Android plug-in for Gradle supports two different types of builds: debug and release.
+Both can be configured inside the buildTypes block inside of the module build file.
 
 
 
 Explain the build process in Android:
+https://developer.android.com/studio/build
+
+
+
 What is the Android Application Architecture?
-Describe activities
-Lifecycle of an Activity
+https://www.geeksforgeeks.org/android-architecture/
+
+
+
+Describe activities?
+https://developer.android.com/guide/components/activities/intro-activities#tcoa
+
+Lifecycle of an Activity?
+https://developer.android.com/guide/components/activities/intro-activities#tcoa
+
+
 What’s the difference between onCreate() and onStart()?
+https://developer.android.com/guide/components/activities/intro-activities#tcoa
+
+
 Scenario in which only onDestroy is called for an activity without onPause() and onStop()?
+when you call finish() function while creating the activity
+
+
+
 Why would you do the setContentView() in onCreate() of Activity class?
+As onCreate() of an Activity is called only once, this is the point where most initialization should go:
+calling setContentView(int) to inflate the activity's UI, using findViewById to programmatically
+interact with widgets in the UI, calling managedQuery(android.net.Uri, String[], String, String[], String)
+to retrieve cursors for data being displayed, etc.
+It is inefficient to set the content in onResume() or onStart() (which are called multiple times)
+as the setContentView() is a heavy operation.
+
+
+
+
 onSavedInstanceState() and onRestoreInstanceState() in activity?
+
+
 Describe services
-Difference between Service & Intent Service
+https://developer.android.com/guide/components/services
+
+
+
+Difference between Service & Intent Service?
+https://www.geeksforgeeks.org/difference-between-service-and-intentservice-in-android/
+
+
+
 Difference between AsyncTasks & Threads?
+
+
+
 Difference between Service, Intent Service, AsyncTask & Threads
+https://stackoverflow.com/questions/18480206/asynctask-vs-thread-in-android
+
+
+
 What are Handlers?
 What is a Job Scheduling?
 How does memory leak happen?
